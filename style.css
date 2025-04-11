@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.home{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("Photos/food_backgound.jpeg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(12,11,9,0.6); color: #fff;
+    padding: 10px 150px;
+}
+nav.logo h1{
+    text-transform: uppercase;
+    color: #cda45e;
+    font-size: 25px;
+}
+nav h1 span{
+    color: #fff;
+    font-family: cursive;
+    font-size: 25px;
+    text-transform: lowercase;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    padding: 15px;
+}
+nav ul li a{
+    text-decoration: none; color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.4s ease;
+}
+nav ul li a:hover{
+    color: #cda45e;
+
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin-top : -50px;
+}
+.banner h2{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 1px solid #cda45e;
+    padding: 20px;
+    font-size: 30px;
+}
+.banner h2 span{
+    color: #cda45e;
+}
+.banner h3{
+    color: #fff;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 35px;
+    font-family: cursive;
+
+}
+.special{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.special h1{
+    background-color: #cda45e;
+    color:#292929 ;
+    padding: 10px;
+    font-size: 12px;
+    word-spacing: 5px;
+    text-transform:uppercase ;
+    position: absolute;
+    left: 700px;
+    top: 390px;
+}
+.special .special-box{
+    height: 200px;
+    width: 160px;
+    background: rgba(0,0,0,0.6);
+    margin-top: -150px;
+    border-top-right-radius: 100px;
+    border-top-left-radius:100px ;
+    border: 2px solid #cda45e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.special-box img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #cda45e;
+}
+.special-box h2{
+    color: #cda45e;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.special-box h3{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 5px;
+} 
