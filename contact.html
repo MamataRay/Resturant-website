@@ -20,7 +20,7 @@
                 <li><a href="ice_cream.html">Ice-Cream</a></li>
                 <li><a href="milkshake.html">Milkshakes</a></li>
                 <li><a href="juices.html">Juices</a></li>
-                <li><a href="cackes.html">Cakes</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="social">
@@ -36,8 +36,6 @@
                 <i class="fa fa-address-card"></i>
                 <h1>Dine with Us</h1>
                 <h2>MG Marg,Gangtok.</h2>
-                
-
                </div> 
                <div class="box box-2">
                 <i class="fa fa-mobile">
@@ -52,7 +50,6 @@
                 <i class="fa fa-globe"></i>
                 <h3>www.dine-with-us.com</h3>
                </div> 
-
             </div>
     <div class="panel contact">
         <h3>Contact</h3>
@@ -69,12 +66,25 @@
             <textarea name="message" id="txtMsg" cols="42" rows="4" placeholder="Message"></textarea>
         </div>
         <div class="from-group">
-            <button class="btn-send">Send</button>
+            <button class="btn-send" >Send</button>
         </div>
     </div>
     </div>
     </section>
-      
-       
+    <script>
+      document.querySelector(".btn-send").addEventListener("click", function () {
+          const name = document.getElementById("txtName").value.trim();
+          const phone = document.getElementById("numPhone").value.trim();
+          const email = document.getElementById("txtMail").value.trim();
+          const message = document.getElementById("txtMsg").value.trim();
+
+          if (!name || !phone || !email || !message) {
+              alert("Please fill in all fields before sending.");
+          } else {
+              alert("Sent successfully. You will be contacted soon.");
+          }
+      });
+    </script>
+          
 </body>
-</html>  
+</html>

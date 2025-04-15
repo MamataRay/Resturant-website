@@ -10,7 +10,21 @@ btnClose.addEventListener('click',()=>{
     cart.classList.remove('cart-active');
 });
 
-document.addEventListener('DOMContentLoaded',loadFood);
+document.addEventListener('DOMContentLoaded', () => {
+    loadFood();
+    const storedCart = localStorage.getItem('cartItems');
+    if (storedCart) {
+        itemList = JSON.parse(storedCart);
+        itemList.forEach(item => {
+            const newProductElement = createCartProduct(item.title, item.price, item.imgSrc);
+            const element = document.createElement('div');
+            element.innerHTML = newProductElement;
+            const cartBasket = document.querySelector('.cart-content');
+            cartBasket.append(element);
+        });
+        loadContent();
+    }
+});
 
 function loadFood(){
     loadContent();
@@ -37,6 +51,7 @@ function removeItem(){
         let title =this.parentElement.querySelector('.cart-food-title').innerHTML;
         itemList=itemList.filter(el=> el.title !=title);
        this.parentElement.remove();
+       saveCartToLocalStorage();
        loadContent();
     }
 }
@@ -67,6 +82,7 @@ function addCart(){
     element.innerHTML=newProductElement;
     let cartBasket= document.querySelector('.cart-content');
     cartBasket.append(element);
+    saveCartToLocalStorage();
     loadContent();
 }
 function createCartProduct(title,price,imgSrc){
@@ -110,3 +126,23 @@ if (count==0){
 else{
     cartCount.style.display = 'block';
 }
+
+function saveCartToLocalStorage() {
+    localStorage.setItem('cartItems', JSON.stringify(itemList));
+}
+
+function placeOrder() {
+    if (itemList.length === 0) {
+        alert("Your cart is empty. Please add items to place an order.");
+        return;
+    }
+    alert("Order placed successfully!");
+    itemList = []; // Clear the cart
+    saveCartToLocalStorage(); // Update local storage
+
+    // Reload the page to reset the cart and total
+    location.reload();
+}
+
+// Add event listener to the place order button
+document.querySelector('.btn-buy').addEventListener('click', placeOrder);

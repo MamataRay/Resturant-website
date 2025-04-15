@@ -269,3 +269,68 @@ textarea{
     background-color: #cda45e;
     color: #292929;
 }
+/* ========== Responsive Design ========== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .banner h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .special h1 {
+        position: static;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .special {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .banner h2 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .banner h3 {
+        font-size: 22px;
+    }
+
+    .special-box {
+        height: 200px;
+        width: 150px;
+    }
+
+    .special-box h2 {
+        font-size: 14px;
+    }
+
+    .special-box h3 {
+        font-size: 16px;
+    }
+}
