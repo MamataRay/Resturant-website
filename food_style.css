@@ -6,22 +6,25 @@
 
 }
 
-.veg{
-    min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(Photos/veg_background.jpeg);
+.food{
+    min-height: 230vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment:fixed ;
 }
-.header{
+header{
     background: rgba(12,11,9,0.9);
     height: 150px;
     border-bottom:2px solid rgba(12,11,9,0.9) ;
+    position: fixed;
+    width: 100%;
+    z-index: 10 ;
 }
 header h1{
     color: #fff;
     text-align: center;
     padding: 30px 0 20px 0;
-    text-decoration: uppercase;
+    text-transform: uppercase;
 }
 header nav{
     display:flex;
@@ -45,11 +48,11 @@ header nav ul li a {
     letter-spacing: 1px;
     transition: 0.4s ease-in;
 }
-header nav ul li a :hover{
+header nav ul li a:hover{
     color: #cda45e;
 
 }
-.add-cart{
+.btn-cart{
     padding: 5px 30px;
     margin-left: 30px;
     border: 0;
@@ -74,8 +77,8 @@ header nav ul li a :hover{
     background-color: #cda45e;
     color: #292929;
     text-align: center;
-    top:45px;
-    right: 400px;
+    top:48px;
+    right: 360px;
     height: 30px;
     width: 30px;
     padding: 3px;
@@ -86,9 +89,10 @@ header nav ul li a :hover{
 }
 /*cart section*/
 .cart{
+    
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 400px;
     height: 100%;
     overflow-y: auto;
@@ -99,11 +103,12 @@ header nav ul li a :hover{
     box-shadow: 0 1px 4px rgba(40,37,37,0.1);
     padding: 20px;
     z-index: 100;
-
+    transition: right 0.3s ease;
+    
 }
 .cart-active{
     right: 0;
-    transition: 0.4s ease;
+    
 }
 .cart-title{
     text-align: center;
@@ -129,27 +134,78 @@ header nav ul li a :hover{
     border-radius:50% ;
     background-color: #292929;
     padding: 5px;
+    object-fit: cover;
+    margin-left: 20px ;
 }
-.detail.box{
-    display: flex;
+.detail-box{
+    display: grid;
     row-gap: 15px;
-    gap: 8px;
 }
 .price-box{
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
-    font-weight: 500;
-    
-    
 }
 .cart-food-title{
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
 
 }
 .cart-price{
-   
+   font-weight: 600;
+}
+.cart-amt{
+    font-weight: 600;
+}
+.cart-quantity{
+    background-color: #cda45e;
+    color: #292929;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+.cart-remove{
+    font-size:25px ;
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.total-title{
+    font-size: 15px;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: 20px;
+    font-weight: 500;
+}
+.cart .btn-buy{
+    padding: 15px;
+    border: none;
+    outline: 0;
+    background: transparent;
+    border: 2px solid #cda45e;
+    color: #cda45e;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:0.3s ease-in ;
+}
+.cart.btn-buy:hover{
+    color: #292929;
+    background: #cda45e;
+}
+#cart-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 15px;
+    cursor: pointer;
 }
 /*food section*/
 .container{
@@ -159,7 +215,8 @@ header nav ul li a :hover{
     align-items: center;
     min-height: 60vh;
     padding: 50px;
-   
+   position: absolute;
+   top: 150px;
    
 }
 .container .food-box{
@@ -178,14 +235,14 @@ header nav ul li a :hover{
 .container .food-box img{
     height: 100px;
     width: 100px;
-    background: #ddd;
+    background: #cda45e7e;
     border-radius: 50%;
     object-fit: cover;
     padding: 5px;
 }
 .container .food-box h2{
     color: #cda45e;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
     padding-top: 15px ;

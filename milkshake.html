@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milkshakes</title>
+    <link rel="stylesheet" href="food_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .food{
+            background: linear-gradient(rgba(12,11,9,0.7),rgba(12,11,9,0.7)),url(Photos/milkshake_backgound.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            
+        }
+    </style>
+</head>
+<body>
+    <section  class="food">
+        <header class="header">
+            <h1>Milkshakes</h1>
+            <nav>
+                <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="veg.html">Veg</a></li>
+                <li><a href="non-veg.html">Non-Veg </a></li>
+                <li><a href="ice_cream.html">Ice-Cream</a></li>
+                <li><a href="milkshake.html">Milkshakes</a></li>
+                <li><a href="juices.html">Juices</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+                    <button class="btn-cart">cart 
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                    <div class="cart-count">0</div>
+                
+            </nav>
+
+              <!--cart senction-->
+       <div class="cart">
+            <div class="cart-title">Cart items</div>
+            <div class="cart-content">
+                 <!--
+                
+                <div class="cart-box">
+                    <img src="Photos/veg/fried_rice.jpeg" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-food-title">fried rice</div>
+                        <div class="price-box">
+                            <div class="cart-price">Rs.150.00</div>
+                            <div class="cart-amt">Rs.150.00</div>
+                        </div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <i class="fa fa-trash cart-remove" ></i>
+                </div> -->
+            </div>
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">Rs.0</div>
+                    </div>
+            <button class="btn-buy">Place order</button>
+            <i class="fa fa-close" id="cart-close"></i>
+        </div>
+        </header>
+
+      
+            
+
+
+        <!-- food section-->
+        <div class="container">
+            <div class="food-box">
+                <img src="Photos/milkshake/Avocado-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Avocado Milkshake</h2>
+                <h3 class="food-price">Rs.120.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-box">
+                <img src="Photos/milkshake/Banana-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Banana Milkshake</h2>
+                <h3 class="food-price">Rs.130.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-box">
+                <img src="Photos/milkshake/Chocolate-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Chocolate <br> Milkshake</h2>
+                <h3 class="food-price">Rs.150.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-box">
+                <img src="Photos/milkshake/Dates-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Dates Milkshake</h2>
+                <h3 class="food-price">Rs.170.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="food-box">
+                <img src="Photos/milkshake/Dry-Fruit-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Dry Fruit <br> Milkshake </h2>
+                <h3 class="food-price">Rs.210.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="food-box">
+                <img src="Photos/milkshake/Ferrero-Rocher-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Ferrero Milkshake</h2>
+                <h3 class="food-price">Rs.250.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="food-box">
+                <img src="Photos/milkshake/Gulkand-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Gulkand Milkshake</h2>
+                <h3 class="food-price">Rs.210.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="food-box">
+                <img src="Photos/milkshake/Kesar-Pista-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Kesar Pista <br> Milkshake</h2>
+                <h3 class="food-price">Rs.210.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="food-box">
+                <img src="Photos/milkshake/Mango-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Mango Milkshake</h2>
+                <h3 class="food-price">Rs.190.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="food-box">
+                <img src="Photos/milkshake/Oreo-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Oreo Milkshake</h2>
+                <h3 class="food-price">Rs.240.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-box">
+                <img src="Photos/milkshake/Strawberry-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Strawberry <br>Milk shake</h2>
+                <h3 class="food-price">Rs.220.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-box">
+                <img src="Photos/milkshake/Vanilla-Milkshake.jpg"class="food-img" alt="">
+                <h2 class="food-title">Vanilla Milkshake</h2>
+                <h3 class="food-price">Rs.210.00</h3>
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+    
+       <script src="javascript/script.js"> </script>
+    
+</body>
+</html>
