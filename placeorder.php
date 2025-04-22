@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "INSERT INTO reg (name, number, email, message) VALUES ('$name', '$number', '$email', '$message')";
 
         if ($conn->query($sql)) {
-            echo "<script>alert('Submitted'); window.location.href='index.html';</script>";
+            echo "<script>alert('Your Order is placed'); window.location.href='index.html';</script>";
             exit;
         } else {
             echo "Error: " . $conn->error;
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Place your order</title>
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="email" name="email" id="txtMail" placeholder="Your Email id" required>
                 </div>
                 <div class="from-group">
-                    <textarea name="message" id="txtMsg" cols="42" rows="4" placeholder="Message" required></textarea>
+                    <textarea name="message" id="txtMsg" cols="34" rows="3" placeholder="Message" required></textarea>
                 </div>
                 <div class="from-group">
                     <button class="btn-send" type="submit">Place order</button>
